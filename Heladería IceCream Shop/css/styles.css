@@ -1,0 +1,268 @@
+﻿/* Variables y Estilos Base para Colores (Rosa y Morado) */
+:root {
+    --color-primary: #FF69B4; /* Rosa Chicle/Fuerte */
+    --color-secondary: #8A2BE2; /* Azul Violeta (Morado) */
+    --color-light: #F8F8FF;
+    --color-dark: #333;
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-light);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+/* 1. Barra de Navegación (Flexbox) */
+.navbar {
+    background: var(--color-secondary);
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    display: flex; /* FLEXBOX: Alinea logo y enlaces */
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* FLEXBOX: Enlaces horizontales */
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+
+/* 2. Sección de Productos (Ajuste para 3 columnas en escritorio) */
+.product-grid {
+    display: flex; /* 🔑 FLEXBOX */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: stretch; 
+    gap: 20px; 
+    margin-bottom: 2rem;
+    
+    /* ANULACIÓN de propiedades Grid */
+    grid-template-columns: none;
+    grid-gap: none; 
+}
+
+.product-card {
+    background: #fff;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    
+    /* 🔑 CLAVE ESCRITORIO: 3 tarjetas por fila (100% / 3) - el espacio del gap (20px) */
+    width: calc(33.33% - 20px); 
+    
+    display: flex;
+    flex-direction: column;
+    
+    /* 🔑 FUERZA ALTURA Y DISTRIBUCIÓN */
+    min-height: 550px; /* Altura ajustada para uniformidad */
+    justify-content: space-between; 
+    
+    clear: none !important; 
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+    color: var(--color-secondary);
+}
+
+.price {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    display: block;
+}
+
+/* 3. Formulario de Compra */
+.purchase-form {
+    background-color: #ffe4e1; /* Fondo rosa pálido */
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-secondary);
+}
+
+/* Flexbox para los radio buttons (Género) */
+.radio-group {
+    display: flex;  
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    font-weight: 700;
+}
+
+/* Estilo para la línea divisoria (hr) */
+hr {
+    margin: 50px 0;  
+    border: none;  
+    border-bottom: 2px solid var(--color-primary);  
+}
+
+/* Estilo para la imagen del producto (para altura uniforme) */
+#products .product-img {
+    width: 100%;
+    height: 300px;  
+    object-fit: cover;  
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* 4. Pie de Página (Diseño de 3 columnas en escritorio) */
+.footer {
+    text-align: center;
+    padding: 3rem 1.5rem; 
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1; 
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.social-links a {
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.copyright {
+    flex-basis: 100%; 
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 5. VISTA ADAPTABLE (MEDIA QUERY) - PUNTO DE QUIEBRE: 768px */
+@media (max-width: 768px) {
+    
+    /* En móvil, la navegación se apila */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* 🔑 CAMBIO CRUCIAL: 3 COLUMNAS A 1 COLUMNA */
+    .product-card {
+        /* 🔑 CLAVE MOVIL: Forzar la tarjeta a ocupar todo el ancho */
+        width: 100%; 
+        /* Restablecer la altura para que el contenido dicte el tamaño en móvil */
+        min-height: auto; 
+    }
+    
+    /* En móvil, el gnero también se apila */
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* En móvil, el footer se apila verticalmente */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+        margin-top: 0.5rem;
+    }
+}

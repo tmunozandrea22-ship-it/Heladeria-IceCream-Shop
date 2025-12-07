@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🍨 IceCream Shop</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="#">
+
+                <h1 class="logo-titulo">IceCream Shop 🍨</h1>
+
+                <p class="logo-subtitulo">Sabores Únicos</p>
+
+            </a>
+
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li><a href="#products">Productos</a></li>
+
+                <li><a href="#purchase-form">Comprar</a></li>
+
+                <li><a href="#contact-info">Contacto</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <section id="products">
+
+            <h2>Nuestros Sabores Estrella</h2>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <img src="images/chocolate.jpg" alt="Bolas de helado de chocolate intenso y cremoso con trozos de chocolate puro" class="product-img">
+                    <h3>Chocolate Intenso 🍫</h3>
+                    <p>Cremoso helado de cacao puro.</p>
+                    <span class="price">$3.50</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/vainilla.jpg" alt="Bolas de helado de vainilla clásica con puntos de vainilla natural" class="product-img">
+                    <h3>Vainilla Clásica ✨</h3>
+                    <p>Suave y aromático, con vainilla natural.</p>
+                    <span class="price">$3.00</span>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/fresa.jpg" alt="Bolas de cremoso helado de fresa con trozos de fresa y sirope" class="product-img">
+                    <h3>Fresa Tentación 🍓</h3>
+                    <p>Sabor refrescante con trozos de fresas.</p>
+                    <span class="price">$3.25</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/menta.jpg" alt="Bolas de helado de menta con trozos grandes de chocolate" class="product-img">
+                    <h3>Menta Chocolate 🍃</h3>
+                    <p>Aromático y fresco, con trozos de chocolate.</p>
+                    <span class="price">$4.00</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/café.jpg" alt="Bolas de helado de café" class="product-img">
+                    <h3>Café Espresso ☕</h3>
+                    <p>Intenso sabor a café recién hecho.</p>
+                    <span class="price">$3.70</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/morazul.jpg" alt="Bolas de helado de mora azul con trozos de mora en el interior" class="product-img">
+                    <h3>Mora Azul 🫐</h3>
+                    <p>Sabor único y vibrante a mora azul.</p>
+                    <span class="price">$5.00</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id="purchase-form" class="purchase-form">
+
+            <h2>Realiza tu Pedido</h2>
+            
+            <form action="javascript:void(0);">
+                
+                <div class="form-group">
+                    <label for="flavor">Sabor del Helado:</label>
+                    <select id="flavor" name="flavor" required>
+                        <option value="" disabled selected>Selecciona un sabor</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="vainilla">Vainilla</option>
+                        <option value="fresa">Fresa</option>
+                        <option value="menta">Menta</option>
+                        <option value="cafe">Café</option>
+                        <option value="mora azul">Mora Azul</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required> 
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="name@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" maxlength="11" placeholder="0412 1234567" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Género (opcional):</label>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Femenino</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-buy">¡Comprar Ahora!</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    
+    <footer class="footer" id="contact-info">
+        <div class="footer-content container">
+
+            <div class="footer-section contact-info">
+                <h3>📍 Información de Contacto</h3>
+                <p><strong>Dirección:</strong> Calle del Sabor, Av. Sweet-123, Ciudad Dulce</p>
+                <p><strong>Teléfono:</strong> <a href="tel:4127042930">0412-7042930</a></p>
+                <p><strong>Correo:</strong> <a href="mailto:contacto@icecreamshop.com">contacto@icecreamshop.com</a></p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>📱 Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer-section copyright">
+                <p>&copy; 2025 IceCream Shop 🍨. Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+
+<script src="js/script.js"></script> 
+
+</body>
+
+</html>
